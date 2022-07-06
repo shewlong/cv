@@ -262,8 +262,10 @@
             
           </p>
           <p class="m-t-0">
-            技术方面收获比较大的地方:将网页的访问速度明显提升。主要通过以下几点实现:1.引入cdn对插件进行加速，在webpack的externals
-            配置选项中去除cdn加速过的插件
+            技术方面收获比较大的地方:将网页的访问速度明显提升。主要通过以下几点实现:1.引入cdn对插件进行加速，然后在webpack的externals
+            配置选项中去除cdn加速过的插件，避免进行打包2.在生产环境中将webpck的productionSourceMap设为false,避免产生map文件,减少压缩包
+            体积3.采用路由懒加载的方式来更加高效的加载对应组件4.使用uglifyjs-webpack-plugin第三方插件来压缩对应的编译生成的js&&css代码
+            5.在前端使用compression-webpack-plugin第三方插件，以及后端通过设置nginx的gzip_static选项的方式开启gzip压缩
           </p>
         </div>
         <div class="box bg-gray-lightest">
