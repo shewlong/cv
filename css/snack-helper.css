@@ -350,6 +350,8 @@
 
 .bg-gray-lightest {
   background-color: #efefef !important;
+  	word-break:break-all;
+	/* white-space:pre-wrap; */
 }
 
 .bg-gray-dark {
