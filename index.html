@@ -89,7 +89,7 @@
           <div class="row g-32">
             <div class="col-4 p-y-8 b-r-1">● 刘小龙 | 男 | 1996</div>
             <div class="col-4 p-y-8 b-r-1">● 南阳理工 | 软件工程 | 本科</div>
-            <div class="col-4 p-y-8">● 应聘前端开发 | 3 年工作经验</div>
+            <div class="col-4 p-y-8">● 应聘web前端开发 | 3 年工作经验</div>
           </div>
         </div>
         <div class="box bg-gray-lightest">
@@ -303,7 +303,11 @@
             Generator 函数的语法糖async&&await来处理这一问题
           </p>
           <p class="m-t-0">
-            技术方面收获比较大的地方:掌握了微信小程序授权登录的流程以及小程序发布审核。待完善
+            技术方面收获比较大的地方:掌握了微信小程序授权登录的流程。1、客户端调用wx.login()获取临时登录凭证code，并作为参数传给后台。
+            2、后台调用auth.code2Session接口，从微信服务器中拿到以下信息并返回给客户端：用户唯一标识openid、用户在微信开放平台账号下的 唯一标识unionid（前提是当前小程序已绑定到微信开放平台账号）和会话密钥session_key。
+            3、然后后台通过用户标识来生成自定义登录态（token）并返回给客户端，用于后续业务逻辑中前后端交互时识别用户身份。
+            4、客户端获取登录态后存到本地缓存5、客户端携带token并通过wx.request()向后台发起业务请求。
+            6、后台根据token查询openid和 session_key，进而返回相关的业务数据。
           </p>
         </div>
         <!-- <div class="box bg-gray-lightest">
