@@ -171,12 +171,12 @@
             >
           </div>
           <div class="box bg-gray-lightest">
-            ●《this指向问题汇总》:
+            ● 《按钮级别权限控制》
             <a
-              href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/124199576"
+              href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/126122786"
               target="_blank"
               class="text-gray-dark"
-              >https://blog.csdn.net/xiao_zhu_ting_feng/article/details/124199576</a
+              >https://blog.csdn.net/xiao_zhu_ting_feng/article/details/126122786</a
             >
           </div>
           <div class="box bg-gray-lightest">
@@ -189,21 +189,12 @@
             >
           </div>
           <div class="box bg-gray-lightest">
-            ● 《ts中数组的用法》
+            ●《this指向问题汇总》:
             <a
-              href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/113868730"
+              href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/124199576"
               target="_blank"
               class="text-gray-dark"
-              >https://blog.csdn.net/xiao_zhu_ting_feng/article/details/113868730</a
-            >
-          </div>
-          <div class="box bg-gray-lightest">
-            ● 《异常情况处置方案》:
-            <a
-              href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/126034088"
-              target="_blank"
-              class="text-gray-dark"
-              >https://blog.csdn.net/xiao_zhu_ting_feng/article/details/126034088</a
+              >https://blog.csdn.net/xiao_zhu_ting_feng/article/details/124199576</a
             >
           </div>
           <div class="box bg-gray-lightest">
@@ -220,6 +211,15 @@
           <a href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/125721032" target="_blank"
              class="text-gray-dark">https://blog.csdn.net/xiao_zhu_ting_feng/article/details/125721032</a>
         </div>
+        <div class="box bg-gray-lightest">
+            ● 《异常情况处置方案》:
+            <a
+              href="https://blog.csdn.net/xiao_zhu_ting_feng/article/details/126034088"
+              target="_blank"
+              class="text-gray-dark"
+              >https://blog.csdn.net/xiao_zhu_ting_feng/article/details/126034088</a
+            >
+          </div>
         </div>
       </section>
 
@@ -238,22 +238,21 @@
           我在此项目主要负责首页、演出、个人中心以及项目的打包发布。
          </p>
          <p class="m-t-0">
-          我所遇到的最困难的问题：首页主题的构建，这一模块需要对接首页所有模块，
-          首页主题包含的模块有状态栏背景、频道背景、banner区域背景、推荐背景等，
-          在对接过程中，我对首页代码进行优化，将组件化、模块化开发的理念贯彻其中，减少
-          变量的引用，能复用的部分一律封装为统一组件供首页调用，采用在首页统一调用接口，
-          vuex对主题接口数据进行统一存取，避免了重复调取接口，减少系统资源的浪费；
+          我所遇到的最困难的问题：首页主题的构建，需要对接模块有状态栏背景、频道背景、banner区域背景、推荐背景等。
+          解决方案：1.我对首页代码进行优化，将组件化、模块化开发的理念贯彻其中，减少
+          变量的引用，能复用的部分一律封装为统一组件供首页调用。2.采用在首页统一调用接口。
+          3.vuex对主题接口数据进行统一存取，减少对系统资源的浪费。
          </p>
           <p class="m-t-0">
             技术方面收获比较大的地方：首页推荐技术实现细节的处理，由于首页推荐部分采用
             的是瀑布流的效果，瀑布流的主要特性便是错落有致，定宽而不定高
-            比较容易受到用户的依赖。需求是在瀑布流的第二排第二个位置，增加一个固定广告位，
+            比较容易受到用户的依赖。实现过程：1.需求是在瀑布流的第二排第二个位置，增加一个固定广告位，
             用来向用户推荐广告，在向该位置插入广告数据时，由于类名使用的advert,
-            这条数据一直显示不出来，经过修改类名（某些机型浏览器会自动屏蔽到类名为advert的图片），
-            广告图片正常显示。但是当前两条演出数据高度不一致时，会出现固定广告位无法固定的情况
-            ，我采用的解决方案：首先通过refs拿到前两条的offsetHeight，然后通过高度对比来确
-            定插入到哪个位置。在从别的页面返回到首页时，会发现瀑布流偶发性的出现单列的情况，我通过给recommend
-            组件绑定key来让组件重绘的方式（key改变的可引起组件重绘）解决了这一问题
+            这条数据一直显示不出来，通过修改类名（某些机型浏览器会自动屏蔽到类名为advert的图片）让
+            广告图片正常显示。2.当前两条演出数据高度不一致时，会出现固定广告位无法固定的情况
+            ，首先通过refs拿到前两条的offsetHeight，然后通过高度对比来确
+            定插入到哪个位置。3.从别的页面返回到首页时，会发现瀑布流偶发性的出现单列的情况，我通过给recommend
+            组件绑定key来让组件重绘的方式（key改变的可引起组件重绘）让其显示正常
           </p>
         </div>
         <div class="box bg-gray-lightest">
@@ -294,16 +293,14 @@
             我在此项目负责了登录模块，首页以及我的模块等
           </p>
           <p class="m-t-0">
-            我所遇到的最困难的问题：解决了项目中遇到的回调地狱问题。首页的推荐模块有4种布局：1商品：单行;双行:(瀑布流双行无固定广告;瀑布流双行固定广告)2店铺
+            我所遇到的最困难的问题：项目中遇到的回调地狱问题。解决方案：1.首页的推荐模块有4种布局：1商品：单行;双行:(瀑布流双行无固定广告;瀑布流双行固定广告)2店铺
             类：店铺，具体需要用到哪种布局由接口来确定，这就意味着必须要等到布局的接口数据返回之后，才能调用首页其他的接口，所以
-            我采用接口内部来调用其他接口的方法来解决这个问题;但是在实际操作过程中，发现无法控制页面渲染的先后顺序，在测试环境中，
-            推荐模块的接口返回的数据较快，推荐上面的金刚区接口返回数据较慢，这样就导致了在页面首次加载时，下面的部分先渲染的情况，
-            我采用在金刚区的接口内部调用推荐模块接口的方式解决了这个问题;但是像这样层层嵌套，有可能会导致回调地狱的问题，不仅代码
-            可读性差，后期难以维护，更重要的是嵌套函数存在严重的耦合，牵一发而动全身，在经过小组讨论后，我采用了ES6新增属性，也是
-            Generator 函数的语法糖async&&await来处理这一问题
+            采用接口内部来调用其他接口的方法来解决;2.无法控制页面渲染的先后顺序，在测试环境中推荐模块的接口返回的数据较快，推荐上面的金刚区接口返回数据较慢，
+            这样就导致了在页面首次加载时，下面的部分先渲染的情况，采用在金刚区的接口内部调用推荐模块接口的方式解决;3.接口调用层层嵌套会导致回调地狱的问题，不仅代码
+            可读性差，后期难以维护，更重要的是嵌套函数存在严重的耦合，牵一发而动全身，在经过小组讨论后，我采用Generator 函数的语法糖async&&await解决。
           </p>
           <p class="m-t-0">
-            技术方面收获比较大的地方:掌握了微信小程序授权登录的流程。1、客户端调用wx.login()获取临时登录凭证code，并作为参数传给后台。
+            技术方面收获比较大的地方:掌握了微信小程序授权登录的流程。实现流程：1、客户端调用wx.login()获取临时登录凭证code，并作为参数传给后台。
             2、后台调用auth.code2Session接口，从微信服务器中拿到以下信息并返回给客户端：用户唯一标识openid、用户在微信开放平台账号下的 唯一标识unionid（前提是当前小程序已绑定到微信开放平台账号）和会话密钥session_key。
             3、然后后台通过用户标识来生成自定义登录态（token）并返回给客户端，用于后续业务逻辑中前后端交互时识别用户身份。
             4、客户端获取登录态后存到本地缓存5、客户端携带token并通过wx.request()向后台发起业务请求。
