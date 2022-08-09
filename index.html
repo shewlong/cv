@@ -123,7 +123,7 @@
             ● 熟悉VantUI、ElementUI、Ant Design等UI框架,
           </div>
           <div class="box bg-gray-lightest">
-            ● 熟练使用Vue及其周边工具vuex、vue-router等
+            ● 熟练使用Vue及其周边工具vuex、pinia、vite、vue-router等
           </div>
           <div class="box bg-gray-lightest">
             ● 熟悉http协议，能够使用axios、ajax等网络请求库与后端进行联调
@@ -213,14 +213,41 @@
             ● 中科软科技股份有限公司 （ 2021 年 1 月 ~ 至今 ）
           </div>
           <div class="box bg-gray-lightest">
-            <p class="m-t-0">保利票务平台H5端</p>
-            <p class="m-t-0">
-              保利票务平台H5端是国内观众喜爱的大型演出平台,提供了在线购票服务。同时,保利票务H5端还提供抢购信息、演出巡演查询、演出排行榜、演出资讯等信息。
-            </p>
-            <p class="m-t-0">
-              我在此项目主要负责首页、演出、个人中心以及项目的打包发布。
-            </p>
-            <p class="m-t-0">
+            <span class="m-t-0">
+              <p>项目名称：保利票务平台H5端</p>
+            </span>
+            <span class="m-t-0">
+              <p>
+                项目描述：保利票务平台H5端是国内观众喜爱的大型演出平台,提供了在线购票服务。同时,保利票务H5端还提供抢购信息、演出巡演查询、演出排行榜、演出资讯等信息。
+              </p>
+            </span>
+
+            <span class="m-t-0">
+              <p>责任描述：我在此项目主要负责首页、演出、个人中心模块</p>
+            </span>
+            <span class="m-t-0">
+              技术要点：
+              <p>
+                ● 使用Vant+HTML+LESS构建响应式页面,完成符合UI图以及原型图的页面
+              </p>
+              <p>● 通过TypeScript+vue完成业务逻辑以及页面交互</p>
+              <p>
+                ●
+                vuex作为集中状态管理器,用来存储个人信息、地理位置信息以及字典模块等，减少对后端资源的访问
+              </p>
+              <p>
+                ●
+                将原生swiper.js封装为自定义组件，通过Prop传值来渲染不同形态的swiper
+              </p>
+              <p>
+                ●
+                使用三方插件vue-waterfall实现首页推荐模块瀑布流效果，并插入广告位
+              </p>
+              <p>
+                ● 对axios进行封装，设置baseUrl、header、以及对状态码进行特殊处理
+              </p>
+            </span>
+            <!-- <p class="m-t-0">
               我所遇到的最困难的问题：首页主题的构建，需要对接模块有状态栏背景、频道背景、banner区域背景、推荐背景等。
               解决方案：1.我对首页代码进行优化，将组件化、模块化开发的理念贯彻其中，减少
               变量的引用，能复用的部分一律封装为统一组件供首页调用。2.采用在首页统一调用接口。
@@ -236,7 +263,7 @@
               ，首先通过refs拿到前两条的offsetHeight，然后通过高度对比来确
               定插入到哪个位置。3.从别的页面返回到首页时，会发现瀑布流偶发性的出现单列的情况，我通过给recommend
               组件绑定key来让组件重绘的方式（key改变的可引起组件重绘）让其显示正常
-            </p>
+            </p> -->
           </div>
           <div class="box bg-gray-lightest">
             <p class="m-t-0">保利票务后台管理系统</p>
@@ -322,14 +349,3 @@
     </footer>
   </body>
 </html>
-<script>
-  let obj = {
-    a: 1,
-    b: 2,
-    c: function () {
-      console.log(this);
-    },
-  };
-  const y = obj.c;
-  y();
-</script>
